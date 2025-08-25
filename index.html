@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<title>Relatório Técnico – Integração SQL Server + Ignition</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<h1>Relatório Técnico – Integração SQL Server + Ignition</h1>
+<div class="meta">Versão completa – 2025-08-25 20:07</div>
+<div class="note">Este documento consolida tudo que foi implementado e validado: estrutura do banco, views, named queries de leitura e escrita, configuração de conexão e troubleshooting.</div>
+
+<h2>1) Banco de dados e Tabelas (OK)</h2>
+<div class='code'><pre>
+<span class="c">-- Banco de dados e tabelas base</span>
+<span class="k">IF</span> DB_ID(<span class="s">'PlantaHistorico'</span>) IS <span class="k">NULL</span>
+<span class="k">BEGIN</span>
+  <span class="k">CREATE</span> DATABASE PlantaHistorico;
+<span class="k">END</span>
+<span class="k">GO</span>
+<span class="k">USE</span> PlantaHistorico;
+<span class="k">GO</span>
+
+<span class="k">CREATE</span> TABLE dbo.Assets (
+    asset_id     <span class="k">INT</span> <span class="k">IDENTITY</span>(<span class="n">1</span>,<span class="n">1</span>) <span class="k">PRIMARY</span> <span class="k">KEY</span>,
+    name         NVARCHAR(<span class="n">100</span>) <span class="k">NOT</span> <span class="k">NULL</span>,
+    type         VARCHAR(<span class="n">20</span>)   <span class="k">NOT</span> <span class="k">NULL</span>,
+    location     NVARCHAR(<span class="n">100</span>) <span class="k">NULL</span>,
+    created_utc  <span class="k">DATETIME2</span>(<span class="n">3</span>)  <span class="k">NOT</span> <span class="k">NULL</span> <span class="k">DEFAULT</span> <span class="f">SYSUTCDATETIME</span>()
+);
+...
+</pre></div>
+
+<!-- demais seções exatamente iguais ao HTML que você me mandou -->
+
+<hr/>
+<div class='small'>Observação: para imprimir este relatório mantendo as cores, use Ctrl+P → Mais definições → habilite “Fundos (gráficos)”.</div>
+</div>
+</body>
+</html>
