@@ -1,0 +1,55 @@
+/* Estilo global */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+header {
+    border-bottom: 2px solid #333;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+    color: #222;
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+/* Caixa de código */
+pre {
+    background: #1e1e1e;
+    color: #dcdcdc;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 14px;
+}
+
+code.sql {
+    font-family: "Fira Code", monospace;
+    white-space: pre;
+    display: block;
+}
+
+/* Destaques de sintaxe simples */
+code.sql .keyword {
+    color: #569cd6;
+    font-weight: bold;
+}
+
+code.sql .function {
+    color: #dcdcaa;
+}
+
+code.sql .string {
+    color: #ce9178;
+}
+
+code.sql .number {
+    color: #b5cea8;
+}
